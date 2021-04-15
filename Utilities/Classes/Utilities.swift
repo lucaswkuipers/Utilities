@@ -30,18 +30,22 @@ public class Utilities {
 		
 		let formattedMoney = "$ \(thousands.joined(separator: ",")).\(decimalPart!)"
 		
-		print("Coin formatted!")
+		print("Coin formatted: \(formattedMoney)")
 		return formattedMoney
 	}
 	
 	public static func encode(idList: [String]) -> String {
-		print("ID list encoded to string")
-		return ""
+		
+		let encoded = idList.joined(separator: "|")
+		print("ID list encoded to string: \(encoded)")
+		return encoded
 	}
 	
 	public static func decode(idListString: String) -> [String] {
-		print("String of ID List decoded to array of string")
-		return [""]
+		
+		let decoded = idListString.components(separatedBy: "|")
+		print("String of ID List decoded to array of string: \(decoded)")
+		return decoded
 	}
 }
 
