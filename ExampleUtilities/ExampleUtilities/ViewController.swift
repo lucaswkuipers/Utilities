@@ -18,6 +18,8 @@ class ViewController: UIViewController {
 		let encodedIDList = Utilities.encode(idList: idList)
 		let decodedIDList = Utilities.decode(idListString: encodedIDList)
 		
+		let formatted = Utilities.formatCoin(coinAmount: 123456789.123456789)
+		print(formatted)
 		// Do any additional setup after loading the view.
 	}
 
